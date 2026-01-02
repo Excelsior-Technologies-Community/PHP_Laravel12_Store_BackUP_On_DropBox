@@ -198,7 +198,7 @@ You can verify the backup inside your Dropbox account.
 
 <img width="1498" height="733" alt="image" src="https://github.com/user-attachments/assets/4ea7c9ee-7a09-43e0-8df5-3079a1705c32" />
 
-<img width="1729" height="921" alt="image" src="https://github.com/user-attachments/assets/0b5ce240-cc70-4c2d-82d7-709c14dd4883" />
+![Uploading image.png…]()
 
 
 

@@ -134,6 +134,7 @@ class BackupController extends Controller
             }
         }
 
+        
         // Update current verification status
         $backup->update([
             'verification_status' => $status,

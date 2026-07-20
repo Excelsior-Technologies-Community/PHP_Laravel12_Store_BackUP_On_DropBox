@@ -5,17 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BackupHistory extends Model
+class BackupVerificationHistory extends Model
 {
     use HasFactory;
 
-    protected $table = 'backup_histories';
-
     protected $fillable = [
-        'file_name',
-        'file_size',
-        'status',
+        'backup_history_id',
         'verification_status',
+        'remarks',
         'verified_at',
     ];
 
@@ -23,11 +20,11 @@ class BackupHistory extends Model
         'verified_at' => 'datetime',
     ];
 
-    public function verificationHistories()
+    public function backup()
     {
-        return $this->hasMany(
-            BackupVerificationHistory::class,
+        return $this->belongsTo(
+            BackupHistory::class,
             'backup_history_id'
-        )->latest();
+        );
     }
 }

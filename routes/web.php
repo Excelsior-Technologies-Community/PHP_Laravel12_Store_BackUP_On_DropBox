@@ -17,4 +17,22 @@ Route::get('/backups/download/{id}', [BackupController::class, 'download'])->nam
 
 Route::delete('/backups/delete/{id}', [BackupController::class, 'destroy'])->name('backup.delete');
 
+/*
+|--------------------------------------------------------------------------
+| Backup Verification
+|--------------------------------------------------------------------------
+*/
+
+Route::post('/backups/{id}/verify', [BackupController::class, 'verify'])
+    ->name('backup.verify');
+
+Route::get('/backups/{id}/verification-history', [BackupController::class, 'verificationHistory'])
+    ->name('backup.verification.history');
+
+Route::post('/backups/cleanup', [BackupController::class, 'cleanup'])
+    ->name('backup.cleanup');
+
+Route::get('/backups/cleanup-history', [BackupController::class, 'cleanupHistory'])
+    ->name('backup.cleanup.history');
+    
 Route::get('/statistics', [BackupController::class, 'statistics'])->name('backup.statistics');
